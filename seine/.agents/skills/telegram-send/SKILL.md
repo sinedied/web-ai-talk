@@ -40,7 +40,7 @@ export TELEGRAM_CHAT_ID="your-chat-id"
 To send a message, run the script with the message as argument:
 
 ```sh
-node .agents/skills/telegram-send/send.mjs "Your message here"
+node .agents/skills/telegram-send/scripts/send.mjs "Your message here"
 ```
 
 The script supports Markdown formatting in messages.
