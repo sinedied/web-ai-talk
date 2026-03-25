@@ -1,6 +1,6 @@
 ## Demo 1: agentic skills
 
-- Opus 4.6 => Look at open issues in the repo, and implement the first one
+- Opus 4.6 => Look at open issues in the repo and implement the first one
 
 - Show the skills folders in the repo
   * gh-cli => I use GH, but you can have one for whatever system you use for project management
@@ -16,6 +16,23 @@
 ## Demo 2: chrome mcp
 
 ## Demo 3: AI in chrome devtools
+
+- Show how to enable AI features in Chrome DevTools
+- Go to about page, open devtools
+
+- CORS error => explain this error
+
+- Open network tab
+  * request in error => ask AI => Why is the request failing?
+
+- Select "about seine" => ask AI
+  * Make the "Seine" text css have a nice gradient in line with color theme (look at css vars)
+  * Apply to workspace
+
+- Open github.com => performance => hit refresh
+  * Insights => LCP => ask AI => How to optimize LCP on this page?
+  * Sources => githubassets.com / assets/app/components...
+    * Ask AI => What does this script do? 
 
 ## Demo 4: AI in your website
 
