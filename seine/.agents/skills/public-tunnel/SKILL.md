@@ -15,18 +15,12 @@ When a user asks to expose a local port or create a public URL for a running app
 2. Start a tunnel using `npx tunnelmole` as a background process
 3. Parse the generated `*.tunnelmole.net` URL from the output
 4. Report the public URL back to the user
-5. Create a run once scheduled task to stop the tunnel after 15 minutes (unless the user specifies a different duration)
 
 ## Important Rules
 
 - **Port restriction**: Only expose ports > 1024. Refuse to tunnel privileged ports (0-1024) to prevent exposing sensitive services.
-- **Temporary only**: Tunnels are short-lived. Default duration is **15 minutes**. Always create a scheduled task to stop the tunnel after the specified duration. If the user requests a different duration, use that instead.
 - **Single tunnel per port**: Don't create duplicate tunnels for the same port.
 - **No password needed**: Tunnelmole URLs are directly accessible — no IP/password prompt.
-
-## Auto-Close via Scheduled Task
-
-After starting a tunnel, create a scheduled task that will stop it after the configured duration (default: 15 minutes). Use a one-shot scheduled task with the appropriate `next_run` time. The task prompt should instruct to close the tunnel for the specific port.
 
 ## Example
 
@@ -35,7 +29,6 @@ User: "Create a tunnel for my app on port 5173"
 1. Start the tunnel as a background process
 2. Read the output to get the `*.tunnelmole.net` URL
 3. Send the user the URL
-4. Schedule a task to close the tunnel in 15 minutes
 
 Response example:
 > Your app is now publicly accessible at: `https://f38fg.tunnelmole.net`
