@@ -1,6 +1,10 @@
 # Seine
 
-A modern online demo store, similar to another famous one named after a river. Seine is built with raw HTML, CSS, and JavaScript, without any frameworks for demo simplicity. 
+A modern online demo store, similar to another famous one named after a river. Seine is built with raw HTML, CSS, and JavaScript, without any frameworks for demo simplicity.
+
+## Structure
+
+New pages except index.html should be created under the pages/ directory, and linked to from the header. Header should be identical across all pages, so you can copy-paste it from index.html. 
 
 ## Workflow
 
