@@ -3,6 +3,7 @@
 ## Prerequisites
 
 - AI in devtools: https://developer.chrome.com/docs/devtools/ai-assistance/get-started#requirements
+- `npm install -g @playwright/cli@latest`
 
 ## Browser tabs to open
 
