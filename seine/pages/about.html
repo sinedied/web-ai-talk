@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Seine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <svg width="160" height="40" viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Seine">
+                    <path d="M18 3 C18 3, 8 16, 8 23 C8 28.5 12.5 33 18 33 C23.5 33 28 28.5 28 23 C28 16, 18 3, 18 3Z" fill="#5b9cf0"/>
+                    <path d="M14 22 C14 22, 15.8 19, 18 21.5 C20.2 24, 22 21, 22 21" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+                    <text x="36" y="26" font-family="Sora, sans-serif" font-weight="700" font-size="26" fill="#ffffff" letter-spacing="4">SEINE</text>
+                </svg>
+            </div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#products">Products</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="about-section">
+                <div class="about-header">
+                    <h1>About Seine</h1>
+                    <p>We're passionate about delivering the best in tech at accessible prices.</p>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-story">
+                        <h2>Our Story</h2>
+                        <p>Founded in 2020, Seine started with a simple mission: make premium tech products available to everyone. From our headquarters along the banks of the Seine river in Paris, we curate and design products that combine cutting-edge technology with modern aesthetics.</p>
+                        <p>Today, our team of engineers and designers continues to push boundaries — from headphones and smart devices to accessories and gadgets — bringing the best tech to everyday life.</p>
+                    </div>
+
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <span class="stat-number">50K+</span>
+                            <span class="stat-label">Happy Customers</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">12</span>
+                            <span class="stat-label">Countries</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">4.4★</span>
+                            <span class="stat-label">Avg Rating</span>
+                        </div>
+                    </div>
+
+                    <div class="about-instagram">
+                        <h2>Latest from Instagram</h2>
+                        <p>Follow us <strong>@seine_tech</strong> for behind-the-scenes content and community highlights.</p>
+                        <div id="instagram-feed" class="instagram-grid">
+                            <p class="loading-text">Loading Instagram feed...</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 La Seine. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Fetch Instagram feed from their API — triggers a CORS error
+        // because instagram.com does not set Access-Control-Allow-Origin
+        // for browser requests from other origins.
+        fetch('https://www.instagram.com/seine_tech/?__a=1&__d=dis')
+            .then(response => response.json())
+            .then(data => {
+                const feed = document.getElementById('instagram-feed');
+                feed.innerHTML = '<p>Feed loaded successfully!</p>';
+            })
+            .catch(error => {
+                const feed = document.getElementById('instagram-feed');
+                feed.innerHTML = '<p class="error-text">⚠️ Failed to load Instagram feed. Check the browser console for details.</p>';
+                console.error('Instagram fetch failed:', error);
+            });
+    </script>
+</body>
+</html>
