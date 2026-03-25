@@ -1,3 +1,30 @@
+# Talk
+
+## Prerequisites
+
+- AI in devtools: https://developer.chrome.com/docs/devtools/ai-assistance/get-started#requirements
+
+## Browser tabs to open
+
+- chrome://on-device-internals
+
+- https://llmstxt.org/
+- https://angular.dev/llms.txt
+- https://angular.dev/assets/context/llms-full.txt
+
+
+
+## References
+- https://developer.mozilla.org/en-US/docs/Web/API/Summarizer_API
+- https://developer.chrome.com/docs/ai/summarizer-api
+https://developer.chrome.com/docs/extensions/ai
+- https://github.com/ChromeDevTools/chrome-devtools-mcp
+
+### Chrome APIs
+- chrome://flags/#optimization-guide-on-device-model
+- chrome://flags/prompt-api-for-gemini-nano-multimodal-input
+- chrome://flags/#proofreader-api-for-gemini-nano
+
 ## qui parle (et prepare les demos)
 
 Whose machine?
