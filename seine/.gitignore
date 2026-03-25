@@ -5,3 +5,4 @@ dist/
 temp/
 .eslintcache
 .playwright-cli/
+*.env*
