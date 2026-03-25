@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Sarah Johnson",
+    "title": "Outstanding sound quality and battery life!",
+    "rating": 5,
+    "date": "2024-01-15",
+    "review": "Absolutely love this wireless headphone! The sound quality is incredible and the battery life lasts all day. Perfect for my daily commute."
+  },
+  {
+    "id": 2,
+    "name": "Mike Chen",
+    "title": "Good headphones with minor bass issues",
+    "rating": 4,
+    "date": "2024-01-10",
+    "review": "Great headphones overall. The noise cancellation works well, though I wish the bass was a bit stronger. Still recommend for the price point."
+  },
+  {
+    "id": 3,
+    "name": "Emily Rodriguez",
+    "title": "Exceeded expectations - premium quality!",
+    "rating": 5,
+    "date": "2024-01-08",
+    "review": "These headphones exceeded my expectations! Super comfortable for long listening sessions and the build quality feels premium."
+  },
+  {
+    "id": 4,
+    "name": "David Thompson",
+    "title": "Decent value but fit takes getting used to",
+    "rating": 3,
+    "date": "2024-01-05",
+    "review": "Decent headphones but took some time to get used to the fit. Sound quality is good but not exceptional. Fair value for money."
+  },
+  {
+    "id": 5,
+    "name": "Lisa Park",
+    "title": "Amazing wireless connectivity and controls",
+    "rating": 5,
+    "date": "2024-01-02",
+    "review": "Amazing product! The wireless connection is stable and the controls are intuitive. Would definitely buy again."
+  }
+]

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoundWave Pro X1 - Wireless Headphones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">La Seine</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Product Section -->
+            <section class="product-section">
+                <div class="product-images">
+                    <div class="main-image">
+                        <img src="images/headphone.png" alt="SoundWave Pro X1 Wireless Headphones" class="product-image">
+                    </div>
+                    <div class="thumbnail-images">
+                        <div class="thumbnail active">
+                            <span>📷</span>
+                        </div>
+                        <div class="thumbnail">
+                            <span>📷</span>
+                        </div>
+                        <div class="thumbnail">
+                            <span>📷</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <h1>SoundWave Pro X1 Wireless Headphones</h1>
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-text">(4.4 out of 5 stars)</span>
+                        <span class="review-count">Based on 5 reviews</span>
+                    </div>
+                    
+                    <div class="price">
+                        <span class="current-price">$149.99</span>
+                        <span class="original-price">$199.99</span>
+                        <span class="discount">25% OFF</span>
+                    </div>
+
+                    <div class="product-features">
+                        <h3>Key Features:</h3>
+                        <ul>
+                            <li>🎵 Premium Hi-Fi Sound Quality</li>
+                            <li>🔇 Active Noise Cancellation</li>
+                            <li>🔋 30-Hour Battery Life</li>
+                            <li>📶 Bluetooth 5.0 Connectivity</li>
+                            <li>🎤 Built-in Microphone</li>
+                            <li>💧 Water Resistant (IPX4)</li>
+                        </ul>
+                    </div>
+
+                    <div class="product-actions">
+                        <button class="btn-primary">Add to Cart</button>
+                        <button class="btn-secondary">Add to Wishlist</button>
+                    </div>
+
+                    <div class="shipping-info">
+                        <p>✅ Free shipping on orders over $100</p>
+                        <p>🚚 Estimated delivery: 3-5 business days</p>
+                        <p>↩️ 30-day return policy</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Product Description -->
+            <section class="product-description">
+                <h2>Product Description</h2>
+                <p>Experience audio like never before with the SoundWave Pro X1 Wireless Headphones. Engineered with cutting-edge technology, these headphones deliver crystal-clear sound quality with deep bass and crisp highs. The active noise cancellation feature blocks out unwanted ambient noise, allowing you to immerse yourself completely in your music, podcasts, or calls.</p>
+                
+                <p>With an impressive 30-hour battery life, you can enjoy uninterrupted listening throughout your day. The comfortable over-ear design with memory foam padding ensures hours of comfortable wear, making them perfect for long commutes, work sessions, or relaxation time.</p>
+
+                <h3>Technical Specifications:</h3>
+                <ul>
+                    <li><strong>Driver Size:</strong> 40mm</li>
+                    <li><strong>Frequency Response:</strong> 20Hz - 20kHz</li>
+                    <li><strong>Impedance:</strong> 32 Ohms</li>
+                    <li><strong>Bluetooth Version:</strong> 5.0</li>
+                    <li><strong>Range:</strong> Up to 33 feet (10 meters)</li>
+                    <li><strong>Charging Time:</strong> 2 hours</li>
+                    <li><strong>Weight:</strong> 250g</li>
+                </ul>
+            </section>
+
+            <!-- Reviews Section -->
+            <section class="reviews-section">
+                <div class="reviews-header">
+                    <h2>Customer Reviews</h2>
+                    <button type="button" class="btn-summarize" id="summarize-reviews">Summarize</button>
+                </div>
+                <div id="summarization"></div>
+                <div class="reviews-summary">
+                    <div class="rating-breakdown">
+                        <div class="overall-rating">
+                            <span class="rating-number">4.4</span>
+                            <div class="stars-large">★★★★☆</div>
+                            <p>Based on 5 reviews</p>
+                        </div>
+                        <div class="rating-bars">
+                            <div class="rating-bar">
+                                <span>5 ★</span>
+                                <div class="bar"><div class="fill" style="width: 60%"></div></div>
+                                <span>3</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>4 ★</span>
+                                <div class="bar"><div class="fill" style="width: 20%"></div></div>
+                                <span>1</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>3 ★</span>
+                                <div class="bar"><div class="fill" style="width: 20%"></div></div>
+                                <span>1</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>2 ★</span>
+                                <div class="bar"><div class="fill" style="width: 0%"></div></div>
+                                <span>0</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>1 ★</span>
+                                <div class="bar"><div class="fill" style="width: 0%"></div></div>
+                                <span>0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reviews-list" id="reviews-container">
+                    <!-- Reviews will be dynamically loaded from reviews.json -->
+                </div>
+            </section>
+
+            <!-- Review Form -->
+            <section class="review-form-section">
+                <h2>Write a Review</h2>
+                <form class="review-form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="rating">Rating *</label>
+                        <div class="rating-input">
+                            <input type="radio" id="star5" name="rating" value="5" required>
+                            <label for="star5">★</label>
+                            <input type="radio" id="star4" name="rating" value="4">
+                            <label for="star4">★</label>
+                            <input type="radio" id="star3" name="rating" value="3">
+                            <label for="star3">★</label>
+                            <input type="radio" id="star2" name="rating" value="2">
+                            <label for="star2">★</label>
+                            <input type="radio" id="star1" name="rating" value="1">
+                            <label for="star1">★</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="review-title">Review Title</label>
+                        <input type="text" id="review-title" name="review-title" placeholder="Summarize your review in a few words">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="review-text">Your Review *</label>
+                        <textarea id="review-text" name="review-text" rows="6" placeholder="Share your experience with this product..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="review-photo">Add Photo (Optional)</label>
+                        <div class="file-input-container">
+                            <input type="file" id="review-photo" name="review-photo" accept="image/*">
+                            <button type="button" class="btn-analyse" id="analyse-photo">Analyse</button>
+                        </div>
+                        <small>Upload a photo of the product (JPG, PNG, max 5MB)</small>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Submit Review</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 La Seine. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

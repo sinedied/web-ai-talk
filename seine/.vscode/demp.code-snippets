@@ -1,0 +1,146 @@
+{
+  "if proofreader in self": {
+    "prefix": "if proofreader in self",
+    "body": ["if (\"Proofreader\" in self) {", "  $0", "}"],
+    "description": "if proofreader in self"
+  },
+  "create ProofReader": {
+    "prefix": "create ProofReader",
+    "body": [
+      "const proofReader = await Proofreader.create({",
+      "  $0",
+      "  monitor(m) {",
+      "    m.addEventListener(\"downloadprogress\", (e) => {",
+      "      console.log(`Downloaded ${e.loaded * 100}%`);",
+      "    });",
+      "  },",
+      "});"
+    ],
+    "description": "ProofReader.create"
+  },
+  "expectedInputLanguages": {
+    "prefix": "expectedInputLanguages",
+    "body": ["expectedInputLanguages: [\"en\"],"],
+    "description": "expectedInputLanguages"
+  },
+  "call proofReader": {
+    "prefix": "call proofReader",
+    "body": ["const proofreadResult = await proofReader.proofread(text);"],
+    "description": "call proofReader"
+  },
+  "return proofReader": {
+    "prefix": "return proofReader",
+    "body": ["return proofreadResult.correctedInput;"],
+    "description": "return proofReader"
+  },
+  "if Summarize in self": {
+    "prefix": "if Summarize in self",
+    "body": ["if ('Summarizer' in self) {", "  $0", "}"],
+    "description": "if Summarize in self"
+  },
+  "create Summarizer": {
+    "prefix": "create Summarizer",
+    "body": ["const summarizer = await Summarizer.create({", "  $0", "})"],
+    "description": "create Summarizer"
+  },
+  "Summarizer options": {
+    "prefix": "Summarizer options",
+    "body": [
+      "type: \"key-points\",",
+      "expectedInputLanguages: [\"en\"],",
+      "outputLanguage: \"en\","
+    ],
+    "description": "Summarizer options"
+  },
+  "Summarizer context": {
+    "prefix": "Summarizer context",
+    "body": [
+      "expectedContextLanguages: [\"en\"],",
+      "sharedContext: \"These are review for an article give as a stringify json. Give me a sumarry of what people think\","
+    ],
+    "description": "Summarizer context"
+  },
+  "Summarizer monitor": {
+    "prefix": "Summarizer monitor",
+    "body": [
+      "monitor(m) {",
+      "  m.addEventListener(\"downloadprogress\", (e) => {",
+      "    console.log(`Downloaded ${e.loaded * 100}%`);",
+      "  });",
+      "},"
+    ],
+    "description": "Summarizer monitor"
+  },
+  "call Summarizer": {
+    "prefix": "call Summarizer",
+    "body": [
+      "const response = await summarizer.summarize(JSON.stringify(data));"
+    ],
+    "description": "call Summarizer"
+  },
+  "return Summarizer": {
+    "prefix": "return Summarizer",
+    "body": ["return response;"],
+    "description": "return Summarizer"
+  },
+  "create LanguageModel": {
+    "prefix": "create LanguageModel",
+    "body": [
+      "const session = await LanguageModel.create({",
+      "  expectedInputs: [{ type: \"image\" }],",
+      "});"
+    ],
+    "description": "create LanguageModel"
+  },
+  "LLM Prompt": {
+    "prefix": "LLM Prompt",
+    "body": [
+      "const prompt = `",
+      "This is the image of a product. Generate a description for a review mentioning its condition.",
+      "in one sentence only, tell how you felt when you received this product.",
+      "",
+      "Then, also generate a title for the review.",
+      "Only output a JSON object { title, review}",
+      "`;"
+    ],
+    "description": "LLM Prompt"
+  },
+  "LLM Prompt call": {
+    "prefix": "LLM Prompt call",
+    "body": [
+      "const response = await session.prompt(",
+      "  [",
+      "    {",
+      "      role: \"user\",",
+      "      content: [",
+      "        { type: \"text\", value: prompt },",
+      "        { type: \"image\", value: image },",
+      "      ],",
+      "    },",
+      " ],",
+      " $0",
+      ");"
+    ],
+    "description": "LLM Prompt call"
+  },
+  "LLM Schema constraint": {
+    "prefix": "LLM Schema constraint",
+    "body": ["{", "  responseConstraint: schema,", "}"],
+    "description": "LLM Schema constraint"
+  },
+  "LLM Schema def": {
+    "prefix": "LLM Schema def",
+    "body": [
+      "const schema = {",
+      "  title: \"string\",",
+      "  description: \"string\",",
+      "};"
+    ],
+    "description": "LLM Schema def"
+  },
+  "LLM return": {
+    "prefix": "LLM return",
+    "body": ["return JSON.parse(response);"],
+    "description": "LLM return"
+  }
+}

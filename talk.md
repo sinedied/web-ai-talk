@@ -3,7 +3,6 @@
 Whose machine?
 * Yohan => install Kiro
 
-
 ### 5m Intro
 
 - Olivier: intro + demo site web fil rouge
