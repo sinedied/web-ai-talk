@@ -1,4 +1,4 @@
-## Demo 1: agentic skills
+## Demo 1: agentic skills (yohan)
 
 - Opus 4.6 => Look at open issues in the repo and implement the first one
 
@@ -13,9 +13,9 @@
 
 - Run dev server, and send the URL to me on telegram so I can test you changes on my phone
 
-## Demo 2: chrome mcp
+## Demo 2: chrome mcp (olivier)
 
-## Demo 3: AI in chrome devtools
+## Demo 3: AI in chrome devtools (yohan)
 
 - Show how to enable AI features in Chrome DevTools
 - Go to about page, open devtools
@@ -36,10 +36,10 @@
 
 ## Demo 4: AI in your website
 
-### summarize
+### summarize (olivier)
 
-### proofreader
+### proofreader (olivier)
 
-### create LanguageModel avec image
+### create LanguageModel avec image (yohan)
 
-## Demo 5: WebMCP
+## Demo 5: WebMCP (olivier)
