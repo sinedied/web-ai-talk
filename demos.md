@@ -15,6 +15,8 @@
 
 ## Demo 2: chrome mcp (olivier)
 
+TODO: Olivier
+
 ## Demo 3: AI in chrome devtools (yohan)
 
 - Show how to enable AI features in Chrome DevTools
@@ -43,3 +45,5 @@
 ### create LanguageModel avec image (yohan)
 
 ## Demo 5: WebMCP (olivier)
+
+TODO: Olivier
