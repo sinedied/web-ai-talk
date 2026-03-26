@@ -4,6 +4,7 @@
 
 - AI in devtools: https://developer.chrome.com/docs/devtools/ai-assistance/get-started#requirements
 - `npm install -g @playwright/cli@latest`
+- Kill all servers on port 5173
 
 ## Browser tabs to open
 
@@ -12,8 +13,6 @@
 - https://llmstxt.org/
 - https://angular.dev/llms.txt
 - https://angular.dev/assets/context/llms-full.txt
-
-
 
 ## References
 - https://developer.mozilla.org/en-US/docs/Web/API/Summarizer_API
@@ -26,7 +25,7 @@ https://developer.chrome.com/docs/extensions/ai
 - chrome://flags/prompt-api-for-gemini-nano-multimodal-input
 - chrome://flags/#proofreader-api-for-gemini-nano
 
-## qui parle (et prepare les demos)
+## Talk Outline
 
 Whose machine?
 * Yohan => install Kiro
