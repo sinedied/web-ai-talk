@@ -40,9 +40,15 @@ TODO: Olivier
 
 ### summarize (olivier)
 
+TODO: Olivier
+
 ### proofreader (olivier)
 
+TODO: Olivier
+
 ### create LanguageModel avec image (yohan)
+
+TODO: Yohan
 
 ## Demo 5: WebMCP (olivier)
 
