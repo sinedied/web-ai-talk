@@ -84,7 +84,7 @@
     "description": "return Summarizer"
   },
   "create LanguageModel": {
-    "prefix": "lm1",
+    "prefix": "ll1",
     "body": [
       "const session = await LanguageModel.create({",
       "  expectedInputs: [{ type: \"image\" }],",
@@ -93,7 +93,7 @@
     "description": "create LanguageModel"
   },
   "LLM Prompt": {
-    "prefix": "lm2",
+    "prefix": "ll2",
     "body": [
       "const prompt = `",
       "This is the image of a product. Generate a description for a review mentioning its condition.",
@@ -106,7 +106,7 @@
     "description": "LLM Prompt"
   },
   "LLM Prompt call": {
-    "prefix": "lm3",
+    "prefix": "ll3",
     "body": [
       "const response = await session.prompt(",
       "  [",
@@ -124,12 +124,12 @@
     "description": "LLM Prompt call"
   },
   "LLM Schema constraint": {
-    "prefix": "lm4",
+    "prefix": "ll4",
     "body": ["{", "  responseConstraint: schema,", "}"],
     "description": "LLM Schema constraint"
   },
   "LLM Schema def": {
-    "prefix": "lm5",
+    "prefix": "ll5",
     "body": [
       "const schema = {",
       "  title: \"string\",",
@@ -139,7 +139,7 @@
     "description": "LLM Schema def"
   },
   "LLM return": {
-    "prefix": "lm6",
+    "prefix": "ll6",
     "body": [
       "console.log(response);",
       "return JSON.parse(response);"

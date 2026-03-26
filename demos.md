@@ -40,6 +40,8 @@ TODO: Olivier
 
 ### summarize (olivier)
 
+TODO: Olivier
+
 ```
 if Summarize in self
 
@@ -58,6 +60,8 @@ return Summarizer
 
 ### proofreader (olivier)
 
+TODO: Olivier
+
 ```
 if proofreader in self
 
@@ -73,7 +77,8 @@ return proofReader
 
 ### create LanguageModel avec image (yohan)
 
-Snippets: lm1->lm6
+- Snippets: ll1->ll6
+- Open reviews, upload image of broken headphones and wait
 
 ## Demo 5: WebMCP (olivier)
 
