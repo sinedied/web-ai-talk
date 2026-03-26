@@ -6,3 +6,4 @@ temp/
 .eslintcache
 .playwright-cli/
 *.env*
+!.env.example
