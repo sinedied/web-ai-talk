@@ -40,15 +40,40 @@ TODO: Olivier
 
 ### summarize (olivier)
 
-TODO: Olivier
+```
+if Summarize in self
+
+create Summarizer
+
+Summarizer options
+
+Summarizer context
+
+Summarizer monitor
+
+call Summarizer
+
+return Summarizer
+```
 
 ### proofreader (olivier)
 
-TODO: Olivier
+```
+if proofreader in self
+
+create ProofReader
+
+expectedInputLanguages
+
+call proofReader
+
+return proofReader
+
+```
 
 ### create LanguageModel avec image (yohan)
 
-TODO: Yohan
+Snippets: lm1->lm6
 
 ## Demo 5: WebMCP (olivier)
 
