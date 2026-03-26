@@ -2,11 +2,24 @@
 
 echo "Preparing demo environment..."
 
-# Common preparation for all demos
+## Common preparation for all demos
 
-# echo "" > ./genaisrc/issue-review.genai.js
+echo "// AI Features implementation
+
+async function proofRead(text) {
+
+}
+
+async function summarize(data) {
+
+}
+
+async function analyseImage(image) {
+
+}
+" > ./seine/ai.js
 
 ## Open files
-# code ./genaisrc/issue-review.genai.js
+code seine
 
 echo "Setup done"
