@@ -5,6 +5,7 @@
 - AI in devtools: https://developer.chrome.com/docs/devtools/ai-assistance/get-started#requirements
 - `npm install -g @playwright/cli@latest`
 - Kill all servers on port 5173
+- Run `./prepare.sh` to empty files and open `seine` project in another vscode
 
 ## Browser tabs to open
 
