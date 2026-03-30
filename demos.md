@@ -82,16 +82,35 @@ return proofReader
 
 ## Demo 5: WebMCP (olivier)
 
-TODO: Olivier
+### To prepare for the demo:
+Install Chrome extensions:
+  - [MCP-B](https://chromewebstore.google.com/detail/mcp-b-extension/daohopfhkdelnpemnhlekblhnikhdhfa)
+To provide a proxy to be able to call the tools from any agent
+Add the mcp server:
+```json
+"webmcp": {
+  "type": "http",
+  "url": "https://webmcp-backend-prod-v2.alexmnahas.workers.dev/mcp?key=c2d0586a-2a3b-4962-a3eb-24f7b9831a1d",
+  "disabled": false
+},
+```
+Note: When registering a new tool in the application, reload the tools of the mcp server in the IDE (or wherever)
+
+  - [WebMCP Inspector](https://chromewebstore.google.com/detail/webmcp-model-context-tool/gbpdfapgefenggkahomfgkhfehlcenpd)
+
+
+### Let's code!
 
 2 modes: Imperative and Declarative
 
-### 1. Imperative (JavaScript)
+#### 1. Imperative (JavaScript)
 
 Les tools décarés en JavaScript peuvent être registered et unregistered dynamiquement en utilisant l'API `registerTool`
 
 In `cart.js`
 ```javascript
+import '@mcp-b/global';
+
 const addToCartTool = {
     name: "add_to_cart",
     description: "Add the item to the cart",
@@ -102,15 +121,18 @@ const addToCartTool = {
             quantity: { type: "integer", minimum: 1 }
         },
     },
-    execute: ({item, quantity}) => {
+    execute: ( {item, quantity }) => {
+        console.log(`${quantity} ${item} added to the cart`);
         return `${quantity} ${item} added to the cart`
     } 
 }
 
 navigator.modelContext.registerTool(addToCartTool);
+
+navigator.modelContext.registerTool(addToCartTool);
 ```
 
-### 2. Declarative (HTML)
+#### 2. Declarative (HTML)
 Utilise l'aAPI Declarative pour transformer des formulaires HTML en tools WebMCP en utilisant des anotations pour définir un formulaire comme tool en lui donnant un nom. Tous les champs du formulaires sont automatiquement détectés comme paramètre du tool.   
 Le navigateur traduit tout ça en quelque chose de similaire à ce qu'on a dans la déclaration impérative des tools.
 

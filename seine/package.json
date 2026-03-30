@@ -10,5 +10,9 @@
   },
   "devDependencies": {
     "vite": "^7.0.0"
+  },
+  "dependencies": {
+    "@mcp-b/global": "^2.2.0",
+    "zod-to-json-schema": "^3.25.2"
   }
 }
