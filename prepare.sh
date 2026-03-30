@@ -20,6 +20,11 @@ async function analyseImage(image) {
 " > ./seine/ai.js
 
 ## Open files
-code seine
+USERNAME=$(whoami)
+if [ "$USERNAME" = "oleplus" ]; then
+  kiro seine
+else
+  code seine
+fi
 
 echo "Setup done"

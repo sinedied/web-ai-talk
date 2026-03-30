@@ -83,3 +83,34 @@ return proofReader
 ## Demo 5: WebMCP (olivier)
 
 TODO: Olivier
+
+2 modes:
+- Imperative (JavaScript)
+
+- Declarative (HTML)
+Utilise l'aAPI Declarative pour transformer des formulaires HTML en tools WebMCP en utilisant des anotations pour définir un formulaire comme tool en lui donnant un nom. Tous les champs du formulaires sont automatiquement détectés comme paramètre du tool.   
+Le navigateur traduit tout ça en quelque chose de similaire à ce qu'on a dans la déclaration impérative des tools.
+
+in `index.html`
+```html
+  <form ... toolname="write_review_tool">
+    <input type="radio" ... toolparameterdescription="Rate the product" />
+    <input id="review-title" ... toolparamdescription="A title for the review" />
+    <textarea id="review-text" ...  toolparamdescription="A description of your review"></textarea>
+  </form>
+```
+Show (in extension):
+- The inputSchema (copy/paste the json in an IDE). 
+  - Show that we have the `toolparamdescription` where we put them
+  - Have all the `<option>` of the selecte populated
+  - The photo input didn't have a `toolparamdescription` so by default it is taking it's nearest `<label>`
+  
+=> Show example using extension
+
+Quand un agent appel le tool, il va mettre automatiquement le focus sur le formulaire et remplir les champs. Par défaut il faut toujours aller cliquer sur le bouton "Submit"
+
+Add `toolautosubmit` attribute to `<form ...>`
+```html
+<form ... toolname="write_review_tool" toolautosubmit>
+```
+=> Show example using extension and result in console
