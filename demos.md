@@ -84,10 +84,33 @@ return proofReader
 
 TODO: Olivier
 
-2 modes:
-- Imperative (JavaScript)
+2 modes: Imperative and Declarative
 
-- Declarative (HTML)
+### 1. Imperative (JavaScript)
+
+Les tools décarés en JavaScript peuvent être registered et unregistered dynamiquement en utilisant l'API `registerTool`
+
+In `cart.js`
+```javascript
+const addToCartTool = {
+    name: "add_to_cart",
+    description: "Add the item to the cart",
+    inputSchema: {
+        type: "object",
+        properties: {
+            item: { type: "string", description: "Item name" },
+            quantity: { type: "integer", minimum: 1 }
+        },
+    },
+    execute: ({item, quantity}) => {
+        return `${quantity} ${item} added to the cart`
+    } 
+}
+
+navigator.modelContext.registerTool(addToCartTool);
+```
+
+### 2. Declarative (HTML)
 Utilise l'aAPI Declarative pour transformer des formulaires HTML en tools WebMCP en utilisant des anotations pour définir un formulaire comme tool en lui donnant un nom. Tous les champs du formulaires sont automatiquement détectés comme paramètre du tool.   
 Le navigateur traduit tout ça en quelque chose de similaire à ce qu'on a dans la déclaration impérative des tools.
 
@@ -104,7 +127,7 @@ Show (in extension):
   - Show that we have the `toolparamdescription` where we put them
   - Have all the `<option>` of the selecte populated
   - The photo input didn't have a `toolparamdescription` so by default it is taking it's nearest `<label>`
-  
+
 => Show example using extension
 
 Quand un agent appel le tool, il va mettre automatiquement le focus sur le formulaire et remplir les champs. Par défaut il faut toujours aller cliquer sur le bouton "Submit"
