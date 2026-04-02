@@ -7,3 +7,5 @@ temp/
 .playwright-cli/
 *.env*
 !.env.example
+
+.kiro/specs

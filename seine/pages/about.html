@@ -53,6 +53,23 @@
           <li><a href="../index.html#products">Products</a></li>
           <li><a href="about.html">About</a></li>
         </ul>
+        <div class="cart-icon-container">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Shopping cart">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-badge hidden">0</span>
+          <div class="cart-popup hidden" id="cart-popup">
+            <div class="cart-popup-header">Your Cart</div>
+            <div class="cart-popup-items" id="cart-popup-items">
+              <p class="cart-empty-message">Your cart is empty</p>
+            </div>
+            <div class="cart-popup-footer" id="cart-popup-footer">
+              <span>Total items: <strong id="cart-popup-total">0</strong></span>
+            </div>
+          </div>
+        </div>
       </nav>
     </header>
 
@@ -137,5 +154,6 @@
           console.error("Instagram fetch failed:", error);
         });
     </script>
+    <script src="../cart.js" type="module"></script>
   </body>
 </html>

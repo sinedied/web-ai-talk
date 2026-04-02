@@ -15,7 +15,13 @@
 
 ## Demo 2: chrome mcp (olivier)
 
-TODO: Olivier
+```
+Can you run the application and see how the application works in Chrome browser
+```
+
+```
+Run the application in 3G, 2G and fast internet networks and see how the application performance is and where it slows down
+```
 
 ## Demo 3: AI in chrome devtools (yohan)
 
@@ -107,7 +113,18 @@ Note: When registering a new tool in the application, reload the tools of the mc
 
 Les tools décarés en JavaScript peuvent être registered et unregistered dynamiquement en utilisant l'API `registerTool`
 
-In `cart.js`
+In `cart.js`.  
+Snippets
+```
+tool-create
+tool-name
+tool-description
+tool-schema
+tool-exec-args
+tool-exec-loop
+tool-exec-return
+```
+
 ```javascript
 import '@mcp-b/global';
 
@@ -128,8 +145,6 @@ const addToCartTool = {
 }
 
 navigator.modelContext.registerTool(addToCartTool);
-
-navigator.modelContext.registerTool(addToCartTool);
 ```
 
 #### 2. Declarative (HTML)
@@ -138,7 +153,7 @@ Le navigateur traduit tout ça en quelque chose de similaire à ce qu'on a dans 
 
 in `index.html`
 ```html
-  <form ... toolname="write_review_tool">
+  <form ... toolname="write_review_tool" tooldescription="Add review to the product">
     <input type="radio" ... toolparameterdescription="Rate the product" />
     <input id="review-title" ... toolparamdescription="A title for the review" />
     <textarea id="review-text" ...  toolparamdescription="A description of your review"></textarea>

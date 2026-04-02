@@ -1,7 +1,11 @@
 {
   "if proofreader in self": {
     "prefix": "if proofreader in self",
-    "body": ["if (\"Proofreader\" in self) {", "  $0", "}"],
+    "body": [
+      "if (\"Proofreader\" in self) {",
+      "  $0",
+      "}"
+    ],
     "description": "if proofreader in self"
   },
   "create ProofReader": {
@@ -20,27 +24,41 @@
   },
   "expectedInputLanguages": {
     "prefix": "expectedInputLanguages",
-    "body": ["expectedInputLanguages: [\"en\"],"],
+    "body": [
+      "expectedInputLanguages: [\"en\"],"
+    ],
     "description": "expectedInputLanguages"
   },
   "call proofReader": {
     "prefix": "call proofReader",
-    "body": ["const proofreadResult = await proofReader.proofread(text);"],
+    "body": [
+      "const proofreadResult = await proofReader.proofread(text);"
+    ],
     "description": "call proofReader"
   },
   "return proofReader": {
     "prefix": "return proofReader",
-    "body": ["return proofreadResult.correctedInput;"],
+    "body": [
+      "return proofreadResult.correctedInput;"
+    ],
     "description": "return proofReader"
   },
   "if Summarize in self": {
     "prefix": "if Summarize in self",
-    "body": ["if ('Summarizer' in self) {", "  $0", "}"],
+    "body": [
+      "if ('Summarizer' in self) {",
+      "  $0",
+      "}"
+    ],
     "description": "if Summarize in self"
   },
   "create Summarizer": {
     "prefix": "create Summarizer",
-    "body": ["const summarizer = await Summarizer.create({", "  $0", "})"],
+    "body": [
+      "const summarizer = await Summarizer.create({",
+      "  $0",
+      "})"
+    ],
     "description": "create Summarizer"
   },
   "Summarizer options": {
@@ -80,7 +98,9 @@
   },
   "return Summarizer": {
     "prefix": "return Summarizer",
-    "body": ["return response;"],
+    "body": [
+      "return response;"
+    ],
     "description": "return Summarizer"
   },
   "create LanguageModel": {
@@ -125,7 +145,11 @@
   },
   "LLM Schema constraint": {
     "prefix": "ll4",
-    "body": ["{", "  responseConstraint: schema,", "}"],
+    "body": [
+      "{",
+      "  responseConstraint: schema,",
+      "}"
+    ],
     "description": "LLM Schema constraint"
   },
   "LLM Schema def": {
@@ -145,5 +169,78 @@
       "return JSON.parse(response);"
     ],
     "description": "LLM return"
+  },
+  "addToCartTool": {
+    "prefix": "tool-create",
+    "body": [
+      "const addToCartTool = {",
+      "    name: $1,",
+      "    description: $2,",
+      "    inputSchema: $3,",
+      "    execute: (args: Record<string, unknown>) => {",
+      "       $4",
+      "    }",
+      "}",
+      ""
+    ],
+    "description": ""
+  },
+  "tool name": {
+    "prefix": "tool-name",
+    "body": [
+      "\"add_to_cart\""
+    ],
+    "description": ""
+  },
+  "tool description": {
+    "prefix": "tool-description",
+    "body": [
+      "\"Add the item to the cart\""
+    ],
+    "description": ""
+  },
+  "tool schema": {
+    "prefix": "tool-schema",
+    "body": [
+      "{",
+      "    type: \"object\",",
+      "    properties: {",
+      "        item: { type: \"string\", description: \"Item name\" },",
+      "        quantity: { type: \"integer\", minimum: 1 }",
+      "    },",
+      "}"
+    ],
+    "description": ""
+  },
+  "tool execute args": {
+    "prefix": "tool-exec-args",
+    "body": [
+      "const item = args.item as string;",
+      "const quantity = (args.quantity as number) ?? 1;"
+    ],
+    "description": ""
+  },
+  "tool execute loop": {
+    "prefix": "tool-exec-loop",
+    "body": [
+      "for (let i = 0; i < quantity; i++) {",
+      "    addToCart(item);",
+      "}"
+    ],
+    "description": ""
+  },
+  "tool execute return": {
+    "prefix": "tool-exec-return",
+    "body": [
+      "return `${quantity} ${item} added to the cart`;"
+    ],
+    "description": ""
+  },
+  "tool register": {
+    "prefix": "tool-register",
+    "body": [
+      "navigator.modelContext.registerTool(addToCartTool);"
+    ],
+    "description": ""
   }
 }
