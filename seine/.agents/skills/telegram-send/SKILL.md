@@ -6,7 +6,6 @@ description: "Send a message to the user via Telegram, optionally with media (im
 # Telegram Send
 
 Send a message (with optional media) to the user via Telegram using the Bot API.
-Look for a `.env` file if environment variables are not set.
 
 ## Setup
 
@@ -34,6 +33,8 @@ Set these environment variables (e.g. in your shell profile, `.env` file, or VS 
 export TELEGRAM_BOT_TOKEN="your-bot-token"
 export TELEGRAM_CHAT_ID="your-chat-id"
 ```
+
+Look for a `.env` file at the root of the project or at the same level as the `.agents/` folder if environment variables are not set, and load the environment variables from there.
 
 ## Usage
 
