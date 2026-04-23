@@ -9,11 +9,10 @@
 
 ## Browser tabs to open
 
-- chrome://on-device-internals
-
 - https://llmstxt.org/
 - https://angular.dev/llms.txt
 - https://angular.dev/assets/context/llms-full.txt
+- chrome://on-device-internals
 
 ## References
 - https://developer.mozilla.org/en-US/docs/Web/API/Summarizer_API
